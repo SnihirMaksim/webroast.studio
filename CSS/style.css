@@ -36,3 +36,8 @@ body { font-family: 'Inter', sans-serif; }
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.bg-fixed-layer {
+    /* ... інші властивості ... */
+    background-color: #050505; /* Додай це */
+    background-image: url('img/bg.png'); 
+}
