@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <link rel="preload" href="img/bg.png" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webroast.studio | Web Design for Businesses</title>
@@ -9,33 +8,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
-        
         body { font-family: 'Inter', sans-serif; color: #fff; margin: 0; background-color: #050505; }
-        
-        .bg-fixed-layer {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -10;
-            background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.95)), 
-                        url('img/bg.png'); 
-            background-size: cover;
-            background-position: center;
-        }
-
-        @media (max-width: 768px) {
-            .bg-fixed-layer {
-                background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.95)), 
-                            url('img/phone.png'); 
-                background-size: cover;
-                background-position: center;
-            }
-        }
-
-        .glass { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(12px); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
-        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
 <body>
@@ -52,9 +26,7 @@
     <a href="#" class="h-16 w-auto flex items-center"> 
         <img src="img/logo.png" alt="Logo" class="h-full w-auto object-contain">
     </a>
-
     <button id="menu-btn" class="md:hidden text-white font-bold text-lg">Menu</button>
-
     <div class="hidden md:flex items-center gap-8 text-sm font-semibold opacity-80">
         <a href="#services" class="hover:text-orange-500 transition">Services</a>
         <a href="#portfolio" class="hover:text-orange-500 transition">Works</a>
@@ -125,7 +97,7 @@
                     <img src="img/recentsite.png" alt="Project Preview" class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500">
                 </div>
                 <h3 class="text-xl font-bold mb-2 group-hover:text-orange-500 transition">DML AUTOSERVICE</h3>
-                <p class="text-gray-400 mb-4 text-sm">Modernized a legacy business website with a clean, responsive design. Focused on mobile usability to help the brand look professional and attract more local clients.</p>
+                <p class="text-gray-400 mb-4 text-sm">Modernized a legacy business website with a clean, responsive design.</p>
                 <span class="inline-block text-orange-500 text-xs font-bold uppercase tracking-widest border border-orange-500/30 px-3 py-1 rounded-full">View Website</span>
             </a>
         </div>
@@ -148,7 +120,6 @@
     <section id="contact" data-aos="fade-up" class="glass p-8 md:p-12 rounded-3xl border border-orange-500/20 text-center">
         <h2 class="text-3xl font-bold mb-6">Ready for a change?</h2>
         <p class="text-gray-400 mb-10 max-w-lg mx-auto">Let’s have a quick chat about your business needs.</p>
-        
         <div class="flex flex-wrap justify-center gap-4">
             <a href="mailto:webroaststudio@gmail.com" class="px-6 py-3 bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition text-sm">Email Us</a>
             <a href="https://t.me/webroaststudio" class="px-6 py-3 border border-white/20 rounded-full hover:border-orange-500 transition text-sm">Telegram</a>
@@ -165,19 +136,16 @@
 <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
         btn.textContent = menu.classList.contains('hidden') ? 'Menu' : 'Close';
     });
-
     menu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             menu.classList.add('hidden');
             btn.textContent = 'Menu';
         });
     });
-
     window.onscroll = () => {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
