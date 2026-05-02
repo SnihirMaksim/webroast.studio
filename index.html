@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webroast.studio | Web Design for Businesses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; color: #fff; margin: 0; background-color: #050505; }
+        
+        .bg-fixed-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -10;
+            background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.95)), 
+                        url('img/bg.png'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media (max-width: 768px) {
+            .bg-fixed-layer {
+                background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.95)), 
+                            url('img/phone.png'); 
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-fixed-layer"></div>
+
+<div id="progress-bar" class="fixed top-0 left-0 h-1 bg-orange-500 z-[9999]" style="width: 0%"></div>
+
+<nav class="fixed top-0 w-full h-24 md:h-28 z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/5 flex items-center justify-between px-8">
+    <a href="#" class="h-16 w-auto flex items-center"> 
+        <img src="img/logo.png" alt="Logo" class="h-full w-auto object-contain">
+    </a>
+
+    <button id="menu-btn" class="md:hidden text-white font-bold text-lg">Menu</button>
+
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold opacity-80">
+        <a href="#services" class="hover:text-orange-500 transition">Services</a>
+        <a href="#portfolio" class="hover:text-orange-500 transition">Works</a>
+        <a href="#contact" class="px-5 py-2 border border-orange-500 text-orange-500 rounded-full hover:bg-orange-500 hover:text-white transition">Let's talk</a>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="hidden fixed inset-0 bg-[#050505]/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center space-y-8 text-center">
+    <a href="#services" class="text-2xl font-bold hover:text-orange-500 transition">Services</a>
+    <a href="#portfolio" class="text-2xl font-bold hover:text-orange-500 transition">Works</a>
+    <a href="#contact" class="text-2xl font-bold text-orange-500">Let's talk</a>
+</div>
+
+<section class="min-h-screen flex items-center justify-center pt-32 px-6">
+    <div data-aos="fade-up" class="max-w-3xl text-center">
+        <h1 class="text-5xl md:text-7xl font-black italic tracking-tighter leading-none mb-6">Modernizing your business online.</h1>
+        <p class="text-xl text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
+            We help small businesses look professional, attract more customers, and work better with modern, easy-to-use websites.
+        </p>
+    </div>
+</section>
+
+<main class="max-w-6xl mx-auto px-6 py-20">
+    <section id="services" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <div data-aos="fade-up" class="md:col-span-3 mb-10">
+            <h2 class="text-3xl font-bold">What we do</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="glass p-8 rounded-3xl">
+            <h3 class="text-lg font-bold mb-3 text-orange-500">Website Redesign</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Have an old website? We’ll give it a fresh, modern look that works perfectly on phones and computers.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="glass p-8 rounded-3xl">
+            <h3 class="text-lg font-bold mb-3 text-orange-500">Simple & Fast</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We build websites that are fast, secure, and easy for your customers to find exactly what they need.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" class="glass p-8 rounded-3xl">
+            <h3 class="text-lg font-bold mb-3 text-orange-500">Ongoing Support</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">You focus on your business, we take care of the tech. We are always here if you need to update anything.</p>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <h2 data-aos="fade-up" class="text-3xl font-bold mb-10">Simple Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div data-aos="fade-up" data-aos-delay="100" class="glass p-8 rounded-3xl border border-white/5">
+                <span class="text-4xl font-black text-orange-500 opacity-50 mb-4 block">01</span>
+                <h3 class="font-bold mb-2">Discovery</h3>
+                <p class="text-sm text-gray-400">We analyze your business goals and current site (if you have one) to create a clear plan.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="glass p-8 rounded-3xl border border-white/5">
+                <span class="text-4xl font-black text-orange-500 opacity-50 mb-4 block">02</span>
+                <h3 class="font-bold mb-2">Development</h3>
+                <p class="text-sm text-gray-400">We build your site iteratively, keeping you in the loop with regular updates.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="glass p-8 rounded-3xl border border-white/5">
+                <span class="text-4xl font-black text-orange-500 opacity-50 mb-4 block">03</span>
+                <h3 class="font-bold mb-2">Launch & Support</h3>
+                <p class="text-sm text-gray-400">Your site goes live. We make sure everything works perfectly and provide ongoing help.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" data-aos="fade-up" class="mb-20">
+        <h2 class="text-3xl font-bold mb-10">Recent Project</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="https://snihirmaksim.github.io/dml-autoservice/" target="_blank" class="block glass p-6 rounded-3xl hover:border-orange-500/50 transition duration-500 group">
+                <div class="overflow-hidden rounded-2xl mb-6">
+                    <img src="img/recentsite.png" alt="Project Preview" class="h-64 w-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-orange-500 transition">DML AUTOSERVICE</h3>
+                <p class="text-gray-400 mb-4 text-sm">Modernized a legacy business website with a clean, responsive design. Focused on mobile usability to help the brand look professional and attract more local clients.</p>
+                <span class="inline-block text-orange-500 text-xs font-bold uppercase tracking-widest border border-orange-500/30 px-3 py-1 rounded-full">View Website</span>
+            </a>
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="mb-20">
+        <h2 class="text-3xl font-bold mb-10">FAQ</h2>
+        <div class="space-y-4">
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="font-bold mb-2">How long does it take to build a site?</h4>
+                <p class="text-sm text-gray-400">Usually 1-3 weeks depending on the complexity of the project.</p>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="font-bold mb-2">Can you update my current website?</h4>
+                <p class="text-sm text-gray-400">Yes! We specialize in modernizing legacy websites while keeping your content intact.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up" class="glass p-8 md:p-12 rounded-3xl border border-orange-500/20 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready for a change?</h2>
+        <p class="text-gray-400 mb-10 max-w-lg mx-auto">Let’s have a quick chat about your business needs.</p>
+        
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:webroaststudio@gmail.com" class="px-6 py-3 bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition text-sm">Email Us</a>
+            <a href="https://t.me/webroaststudio" class="px-6 py-3 border border-white/20 rounded-full hover:border-orange-500 transition text-sm">Telegram</a>
+            <a href="https://wa.me/380991234567" class="px-6 py-3 border border-white/20 rounded-full hover:border-orange-500 transition text-sm">WhatsApp</a>
+            <a href="https://www.instagram.com/webroast.studio/" class="px-6 py-3 border border-white/20 rounded-full hover:border-orange-500 transition text-sm">Instagram</a>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-10 opacity-50 text-sm">
+    © 2026 webroast.studio Systems. Helping small businesses grow.
+</footer>
+
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        btn.textContent = menu.classList.contains('hidden') ? 'Menu' : 'Close';
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
+            btn.textContent = 'Menu';
+        });
+    });
+
+    window.onscroll = () => {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
+    };
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
