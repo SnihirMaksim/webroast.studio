@@ -1,8 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
-body { font-family: 'Inter', sans-serif; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    color: #fff; 
+    margin: 0; 
+    background-color: #050505; 
+}
 
-/* Ефект появи */
+/* Background Layer */
+.bg-fixed-layer {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    z-index: -10;
+    background-color: #050505; /* Fallback color */
+    background-image: url('img/bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .bg-fixed-layer {
+        background-image: url('img/phone.png'); 
+    }
+}
+
+/* Reveal Effect */
 .reveal { 
     opacity: 0; 
     transform: translateY(30px); 
@@ -13,31 +39,35 @@ body { font-family: 'Inter', sans-serif; }
     transform: translateY(0); 
 }
 
-/* Ефект скляної шапки */
+/* Header Effect */
 .header-scrolled { 
     background: rgba(5, 5, 5, 0.8); 
     backdrop-filter: blur(10px); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
-/* Картка при наведенні отримує ледь помітне світіння */
+
+/* Card Glow Effect */
 .card-glow {
     transition: all 0.4s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .card-glow:hover {
-    border: 1px solid rgba(249, 115, 22, 0.5); /* оранжеве підсвічування */
+    border: 1px solid rgba(249, 115, 22, 0.5);
     box-shadow: 0 0 20px rgba(249, 115, 22, 0.15);
     transform: translateY(-5px);
 }
+
+/* Text Gradient */
 .gradient-text {
     background: linear-gradient(90deg, #ffffff, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-.bg-fixed-layer {
-    /* ... інші властивості ... */
-    background-color: #050505; /* Додай це */
-    background-image: url('img/bg.png'); 
+
+/* Glass Effect */
+.glass { 
+    background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
 }
